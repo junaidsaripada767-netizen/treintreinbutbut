@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>To Dibil - From Trein</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,serif;height:100vh;overflow:hidden;background:linear-gradient(-45deg,#ff9bb3,#ffc8d6,#ffdfe8,#ffb6c1);background-size:400% 400%;animation:bg 12s ease infinite;color:#fff}
+@keyframes bg{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%}}
+.center{display:flex;flex-direction:column;justify-content:center;align-items:center;height:100vh;text-align:center;padding:24px}
+.card{background:rgba(255,255,255,.15);backdrop-filter:blur(12px);padding:35px;border-radius:22px;max-width:700px}
+h1{font-size:52px}h2{margin:10px 0 25px}
+button{padding:14px 34px;border:none;border-radius:40px;font-size:20px;cursor:pointer}
+#story{display:none}.line{opacity:0;transform:translateY(20px);transition:1s;margin:18px 0;font-size:24px}.show{opacity:1;transform:none}
+.heart{position:fixed;bottom:-30px;font-size:24px;animation:rise 7s linear forwards}
+@keyframes rise{to{transform:translateY(-115vh);opacity:0}}
+.final{font-size:40px;font-weight:bold;color:#fff8b0}
+</style></head>
+<body>
+<div id="cover" class="center"><div class="card">
+<h1>TO DIBIL</h1><h2>FROM TREIN</h2>
+<p>Made with all my love.</p><br>
+<button id="openBtn">OPEN</button>
+</div></div>
+
+<div id="story" class="center"><div class="card" id="text">
+<div class="line">Seven months with you has been one of the happiest parts of my life.</div>
+<div class="line">Thank you for every smile, every laugh, and every moment we've shared.</div>
+<div class="line">No matter what happens, I'll always cherish every memory we've made together.</div>
+<div class="line">I love you more than words can explain.</div>
+<div class="line">Every day with you is a blessing, and I'm grateful for every memory we've created together.</div>
+<div class="line">Thank you for loving me, supporting me, and staying by my side through everything.</div>
+<div class="line">I know we aren't perfect, but I promise to keep choosing you, loving you, and making more beautiful memories with you.</div>
+<div class="line">I hope this is only the beginning of our forever.</div>
+<div class="line">Happy 7th Monthsary, My Love Trexie.</div>
+<div class="line">Alabyo...</div>
+<div class="line">Alabyo...</div>
+<div class="line">Alabyo...</div>
+<div class="line final">LAB LAB KONG DIBIL 🥰🥰😘</div>
+<div class="line">Forever Yours,<br>Junaid.</div>
+</div></div>
+
+<script>
+function heart(){let h=document.createElement('div');h.className='heart';h.textContent='🥰';h.style.left=Math.random()*100+'vw';document.body.appendChild(h);setTimeout(()=>h.remove(),7000)}
+setInterval(heart,300);
+openBtn.onclick=()=>{
+cover.style.display='none';
+story.style.display='flex';
+document.querySelectorAll('.line').forEach((e,i)=>setTimeout(()=>e.classList.add('show'),i*2400));
+}
+</script>
+</body></html>
